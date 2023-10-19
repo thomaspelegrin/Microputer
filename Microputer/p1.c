@@ -96,12 +96,10 @@ int run_default_tests()
 int main(int argc, char *argv[])
 {
     int result = SUCCESS;
-    char * in_bin_file = "project1_reference_files/inp3.dat";
-    char * out_asm_file = "disassembled_output.asm";
 
     if (argc >= 2 && strlen( argv[ 1 ] ) && strlen( argv[ 2 ] ))
     {
-        result = start( in_bin_file, out_asm_file );
+        result = start( argv[ 1 ], argv[ 2 ] );
     } else 
     {
         printf( "\n\t# [WARNING: Files were not specified properly] #\n" );
